@@ -49,5 +49,31 @@
             "\t});"
         ],
         "description": "subscribe"
+    },
+    "observer": {
+        "prefix": "ooo",
+        "body": [
+            "return new Observable(",
+            "\tobserver => {",
+            "\t\t$1",
+            "\t});"
+        ],
+        "description": "observer"
+    },
+    "observer next": {
+        "prefix": "onn",
+        "body": [
+            "observer.next($1);",
+            "observer.complete();"
+        ],
+        "description": "observer next"
+    },
+    "observer error": {
+        "prefix": "oee",
+        "body": [
+            "observer.error(${1:error});",
+            "observer.complete();"
+        ],
+        "description": "observer next"
     }
 }
